@@ -52,13 +52,26 @@
           <div class="hero-full-wrapper">
             <div class="text-content">
               <h1>Tom Williams:<br>
-                <span id="typed-strings">
+                
+                <div id="typed">
                   <span>Doctoral Student at Brown University</span>
                   <span>I'm an igneous petrologist and volcanologist</span>
                   <span> I use microanalytical tools and computational methods to understand the moon and volcanic systems</span>
-                  typeSpeed: 100
-                </span>
-                <span id="typed"></span>
+                </div> 
+                
+                <span id="typed"></span> 
+                var typed = new Typed('#typed',{
+                stringsElement: '#typed-strings',
+                backSpeed: 40,
+                typeSpeed: 40
+                });
+                
+               <! <span id="typed-strings"> ->
+                <!  <span>Doctoral Student at Brown University</span> ->
+                <!  <span>I'm an igneous petrologist and volcanologist</span> ->
+               <!   <span> I use microanalytical tools and computational methods to understand the moon and volcanic systems</span> ->
+              <!  </span> ->
+              <!  <span id="typed"></span> ->
               </h1>
             </div>
           </div>
