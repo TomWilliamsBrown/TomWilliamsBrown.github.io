@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Tom Williams: CV" name="author">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+    <meta content="Tom Williams: CV" name="author">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <link href="../assets/favicon.ico" rel="icon">
+  
+    <title>CV</title>
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  <link href="../assets/favicon.ico" rel="icon">
+<link href="../twilliamscss.css" rel="stylesheet">
 
-  <title>CV</title>
-
-<link href="../twilliamscss.css" rel="stylesheet"></head>
-
+   <style>
+    @media screen and (min-width: 490px) {
+     .desktop {
+     display: block;
+     }
+     .mobile {
+     display: none;
+     }
+    }
+    @media screen and (max-width: 489px) {
+     .desktop {
+     display: none;
+     }
+     .mobile {
+     display: block;
+     }
+    }
+    </style>
+</head>
 <body class="">
 <div id="site-border-left"></div>
 <div id="site-border-right"></div>
@@ -60,63 +78,58 @@
     </div>
   </div>
 
-  <div class="section-container">
+<div class="mobile">
+<div class="section-container">
     <div class="container">
       <div class="row">
-         <div class="col-xs-12" style="position:relative; top: -160px; text-align:center; margin-bottom: -5vw">        
-                <h3><a href="../assets/Resume/Resume.pdf">View Fullscreen Version of CV here</h3></p>    
+        
+         <div class="col-xs-12" style="position:relative; top: -160px; text-align:center; margin-top: 25vh">    
+           <h3><a href="../assets/Resume/Resume.pdf">View Fullscreen Version of CV here</h3></p>     
+                   
          </div>
     </div>
    </div>
-  
-  
-  <!-- <div class="section-container">
+</div>
+</div>
+
+   <div class="desktop">
+   <div class="section-container">
     <div class="container">
       <div class="row">
          <div class="col-xs-12">
-              <div id="contentframe" style="position:relative; top: -160px; text-align:center;">
-                <iframe src="../assets/Resume/Resume.pdf" width="80%" height="1240px ></iframe>
-            </div>  
+  
+            <div
+            <object data="mypdf.pdf" type="application/pdf" frameborder="0" width="80%" height="800px" style="top: -160px; text-align:center; margin-left: auto; margin-top: -10vw;
+            margin-right: auto;">
+              <embed src="../assets/Resume/Resume.pdf" width="80%" height="600px" style="top: -160px; text-align:center;"/> 
+          </object>
+        </div> 
          </div>
     </div>
    </div>
-</div> -->
-
-<div class="section-container">
-  <div class="container">
-    <div class="row">
-       <div class="col-xs-12">
-
-          <div
-          <object data="mypdf.pdf" type="application/pdf" frameborder="0" width="80%" height="800px" style="top: -160px; text-align:center; margin-left: auto; margin-top: -10vw;
-          margin-right: auto;">
-            <embed src="../assets/Resume/Resume.pdf" width="80%" height="600px" style="top: -160px; text-align:center;"/> 
-        </object>
-      </div> 
-       </div>
   </div>
- </div>
-</div>
 
-<hr>
-<footer class="footer-container text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <a href = "mailto: thomas_williams@brown.edu">
-        <p></span>Tom Williams: Geochemist and Volcanologist</a>.</p>
+  
+  <hr>
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <a href = "mailto: thomas_williams@brown.edu">
+          <p></span>Tom Williams: Geochemist and Volcanologist</a>.</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+       navActivePage();
+    });
+  </script>
+  
+  <script type="text/javascript" src="../twilliamsjs.js"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     navActivePage();
-  });
-</script>
 
-<script type="text/javascript" src="../twilliamsjs.js"></script></body>
-
+</body>
 </html>
-
