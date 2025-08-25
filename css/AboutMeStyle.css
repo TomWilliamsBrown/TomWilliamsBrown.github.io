@@ -1,0 +1,22 @@
+/* Spacing between the two blocks */
+.feature-block { margin: 40px 0; }
+
+/* Vertically center columns on >=768px */
+@media (min-width: 768px) {
+  .v-center { display: flex; align-items: center; }
+}
+
+/* Image sizing to resemble the black rectangles in your sketch */
+.feature-img {
+  max-width: 480px;   /* keeps images from getting too huge */
+  width: 100%;
+  height: 320px;      /* creates that “block” look */
+  object-fit: cover;  /* crops nicely if the image aspect differs */
+  background: #000;   /* shows a black box if the image hasn’t loaded */
+  border: 0;
+}
+
+/* Tidy up headings/text spacing */
+h3 { margin-top: 0; margin-bottom: 12px; }
+p  { margin-bottom: 12px; }
+
