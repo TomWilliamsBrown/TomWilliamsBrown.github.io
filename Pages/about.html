@@ -49,41 +49,48 @@
 
 <div class="section-container">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="section-container-spacer text-center">
-            <h1 class="h2">03 : About me</h1>
-          </div>
+  <!-- Block 1: text left, image right -->
+  <div class="row feature-block">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row v-center">
+        <div class="col-sm-6">
+          <h3>Hi! My name is Tom Williams (He/Him/His)</h3>
+          <p>
+            Originally from the UK, I graduated from Oxford University with an MSc in Earth Sciences in 2020. I am now pursuing a PhD in the Department of Earth, Environmental, and Planetary Sciences  at Brown University, where I work with Dr. Stephen Parman and Dr. Alberto Saal.
+          </p>
+        </div>
 
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              <div class="row">
-                <div class="col-xs-12 col-md-6">
-                  <h3>Hi! My name is Tom Williams (He/Him/His).</h3>
-                  <p> Originally from the UK, I graduated from Oxford University with an MSc in Earth Sciences in 2020. I am now
-                    pursuing a PhD in the Department of Earth, Environmental, and Planetary Sciences 
-                    at Brown University, where I work with Dr. Stephen Parman and Dr. Alberto Saal.</p>
-
-                    <p>My research interests focus on volcanic processes, but outside of research I'm an outdoor enthusiast, 
-                      often found running, cycling, hiking, and skiing (climate change permitting). I also enjoy badminton, and 
-                      have recently been persuaded to start playing waterpolo!</p>
-
-                </div>
-                <div class="col-xs-12 col-md-6 text-center" >
-                  <img src="../assets/images/FIBLoad.png" width="75%" 
-                  class="img-responsive; 
-                  display: block;
-                  margin-left: auto;
-                  margin-right: auto;" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-       </div>
+        <div class="col-sm-6 text-center">
+          <img src="../assets/images/FIBLoad.png"
+               class="img-responsive center-block feature-img"
+               alt="Placeholder image">
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- Block 2: image left, text right (flipped on desktop) -->
+  <div class="row feature-block">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row v-center">
+        <!-- Image first on desktop -->
+        <div class="col-sm-6 col-sm-push-6">
+          <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                    <p>
+            My research interests focus on volcanic processes, but outside of research I'm an outdoor enthusiast, often found running, cycling, hiking, and skiing (climate change permitting). I also enjoy playing badminton, and  have recently been persuaded to take up waterpolo!
+          </p>
+        </div>
+
+        <div class="col-sm-6 col-sm-pull-6 text-center">
+          <img src="../assets/images/FIBLoad.png"
+               class="img-responsive center-block feature-img"
+               alt="Placeholder image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   </div>
 
 <hr>
