@@ -1,0 +1,449 @@
+/* ==========================================================================
+   Reset & Base
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html { line-height: 1.15; -webkit-text-size-adjust: 100%; }
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+body {
+  margin: 0;
+  padding: 10px;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  line-height: 25px;
+  color: #333;
+  --nav-color: rgb(0, 0, 0);
+}
+
+body.minimal {
+  border: none;
+  padding: 0;
+  --nav-color: rgb(255, 255, 255)
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: #337ab7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+hr { height: 5px;  border: 0; border-top: 1.5px solid #eee; margin: 0; border-color: #737373;}
+
+
+/* ==========================================================================
+   Grid (replaces Bootstrap grid)
+   ========================================================================== */
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.row > * { padding: 0 15px; }
+
+/* Column widths */
+.col-xs-12 { width: 100%; }
+.col-xs-6 { width: 50%; }
+
+@media (min-width: 768px) {
+  .col-sm-6 { width: 50%; }
+}
+
+@media (min-width: 992px) {
+  .col-md-4 { width: 33.333%; }
+  .col-md-6 { width: 50%; }
+  .col-md-8 { width: 66.666%; }
+  .col-md-10 { width: 83.333%; }
+  .col-md-offset-1 { margin-left: 8.333%; }
+}
+
+/* ==========================================================================
+   Site Border
+   ========================================================================== */
+
+#site-border-top, #site-border-bottom, #site-border-left, #site-border-right {
+  background: #000;
+  position: fixed;
+  z-index: 1;
+}
+
+#site-border-left, #site-border-right {
+  top: 0; bottom: 0; width: 10px;
+}
+
+#site-border-left { left: 0; }
+#site-border-right { right: 0; }
+
+#site-border-top, #site-border-bottom {
+  left: 0; right: 0; height: 10px;
+}
+
+#site-border-top { top: 0; }
+#site-border-bottom { bottom: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+p {
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  line-height: 25px;
+  margin: 0 0 15px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2, .h2 {
+  position: relative;
+  display: inline-block;
+}
+
+h2::before, h2::after, .h2::before, .h2::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #000;
+  width: 1px;
+}
+
+h2::before, .h2::before { left: 0; }
+h2::after, .h2::after { right: 0; }
+
+@media (min-width: 992px) {
+  h2, .h2 { padding: 0 30px; }
+}
+
+@media (max-width: 992px) {
+  h2::after, h2::before, .h2::after, .h2::before { display: none; }
+}
+
+blockquote {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: none;
+  font-weight: 700;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 2.81em;
+  line-height: 40px;
+}
+
+blockquote p { font-weight: 700; line-height: 40px; }
+blockquote small, blockquote .small { color: black; font-weight: normal; font-size: 50%; }
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.text-center { text-align: center; }
+.center-block { margin-left: auto; margin-right: auto; display: block; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* ==========================================================================
+   Hero (Home Page)
+   ========================================================================== */
+
+.hero-full-container {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.hero-full-container h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+  font-size: 8vh;
+  line-height: 1.2;
+}
+
+.hero-full-container .hero-full-wrapper {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.hero-full-container .hero-full-wrapper .text-content {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.white-text-container h1,
+.white-text-container h2,
+.white-text-container h3,
+.white-text-container h4,
+.white-text-container h5,
+.white-text-container p {
+  text-shadow: 0 1px 3px #000;
+  color: white;
+}
+
+.white-text-container a { color: white; }
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1200px) {
+  .section-container { padding: 80px 0; }
+}
+
+.section-container.only-container { min-height: 84vh; }
+
+@media (max-width: 768px) {
+  .section-container:nth-of-type(1) { padding-top: 30px; }
+}
+
+.section-container-spacer {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .section-container-spacer { margin-bottom: 20px; }
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+
+.navbar {
+  border: none;
+  min-height: inherit;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: var(--nav-color);
+}
+
+@media (min-width: 768px) {
+  .navbar { margin: 10px; }
+}
+
+/* Collapse area */
+.navbar-inverse .navbar-collapse,
+.navbar-default .navbar-collapse {
+  margin: 10px -5px;
+  box-shadow: none;
+}
+
+.navbar-inverse .navbar-collapse .navbar-nav,
+.navbar-default .navbar-collapse .navbar-nav {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .navbar-inverse .navbar-collapse,
+  .navbar-default .navbar-collapse {
+    margin: 0;
+    padding: 30px 0;
+  }
+  .navbar-inverse .navbar-collapse .navbar-nav,
+  .navbar-default .navbar-collapse .navbar-nav {
+    padding: 0;
+  }
+}
+
+/* Toggle button */
+.navbar-toggle {
+  padding: 20px;
+  margin: 0;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  background-color: white;
+  cursor: pointer;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+  background-color: white;
+}
+
+.navbar-inverse .navbar-toggle {
+  background-color: #000;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #000;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #888;
+  margin: 4px 0;
+}
+
+.navbar-inverse .icon-bar { background-color: #fff; }
+
+/* Nav links */
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar-nav > li > a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 1400;
+  transition: all 0.1s linear;
+  padding: 10px 15px;
+  display: block;
+  color: inherit;
+  text-decoration:none
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a.active {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .navbar-inverse .navbar-nav > li > a {
+    display: inline-block;    /* shrink-wrap to text */
+    padding: 0 10px;          /* horizontal padding only */
+    line-height: normal;       /* optional: match text height */
+    border-right: 1px solid white; /* original color */
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: normal;
+    border-right: 1px solid #000; /* original color */
+  }
+}
+
+
+.navbar-inverse .navbar-nav > li:last-of-type a,
+.navbar-default .navbar-nav > li:last-of-type a {
+  border-right: none;
+}
+
+.navbar-default .navbar-nav { border-bottom: 1px solid #eee; }
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav { border: none; }
+}
+
+/* Mobile collapse behavior */
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.in {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse { display: block; }
+  .navbar-toggle { display: none; }
+}
+
+/* Mobile background colours */
+@media (max-width: 767px) {
+  .navbar-inverse { background-color: transparent; }
+  .navbar-inverse .navbar-collapse { background-color: black; }
+  .navbar-inverse .navbar-nav > li > a { color: white; }
+  .navbar-default { background-color: transparent; }
+  .navbar-default .navbar-collapse { background-color: white; }
+}
+
+/* ==========================================================================
+   About Me / Feature Blocks
+   ========================================================================== */
+
+.feature-block { margin: 40px 0; }
+
+@media (min-width: 768px) {
+  .v-center { display: flex; align-items: center; }
+}
+
+.feature-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .feature-img { margin-bottom: 20px; }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer-container {
+  padding: 30px 0;
+}
+
+.footer-container p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   CV Page
+   ========================================================================== */
+
+@media screen and (min-width: 490px) {
+  .desktop { display: block; }
+  .mobile { display: none; }
+}
+
+@media screen and (max-width: 489px) {
+  .desktop { display: none; }
+  .mobile { display: block; }
+}
+
+/* ==========================================================================
+   Research Hero Image
+   ========================================================================== */
+
+.research-hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 25vw;
+  margin-bottom: -5vw;
+}
