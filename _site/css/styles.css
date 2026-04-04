@@ -520,4 +520,7 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
   .form-group-half {
     width: 100%;
   }
+  .contact-image {
+    margin-top: 30px;
+  }
 }
