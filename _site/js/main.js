@@ -33,7 +33,7 @@ function type() {
   if (typeof Typed !== "undefined") {
     new Typed("#typed", {
       stringsElement: "#typed-strings",
-      typeSpeed: 70,
+      typeSpeed: 30,
       backSpeed: 0,
       backDelay: 2200,
       loop: true,

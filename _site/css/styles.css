@@ -178,6 +178,11 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
   font-weight: 900;
   font-size: 8vh;
   line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 767px) {
+  .hero-full-container h1 { font-size: 5vh; }
 }
 
 .hero-full-container .hero-full-wrapper {
