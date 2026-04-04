@@ -40,7 +40,7 @@ img { max-width: 100%; height: auto; }
 a { color: #337ab7; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-hr { height: 5px;  border: 0; border-top: 1.5px solid #eee; margin: 0; border-color: #737373;}
+hr { height: 5px;  border: 0; border-top: 1.5px solid #eee; margin: 40px 0 0; border-color: #737373;}
 
 
 /* ==========================================================================
