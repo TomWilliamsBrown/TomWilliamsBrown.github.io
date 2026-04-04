@@ -434,6 +434,9 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
   .align-items-center > [class*="col-"] img {
     margin-bottom: 20px;
   }
+  [style*="text-align: justify"] {
+    text-align: left !important;
+  }
 }
 
 /* ==========================================================================
