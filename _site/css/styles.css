@@ -447,3 +447,86 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
   height: 25vw;
   margin-bottom: -5vw;
 }
+
+/* ==========================================================================
+   Contact Form
+   ========================================================================== */
+
+.contact-form {
+  max-width: 500px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.form-group-half {
+  width: 50%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  color: #333;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom-color: #333;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #333;
+}
+
+@media (max-width: 767px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .form-group-half {
+    width: 100%;
+  }
+}
