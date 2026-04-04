@@ -443,7 +443,15 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
   background-size: cover;
   width: 100vw;
   height: 25vw;
+  min-height: 200px;
   margin-bottom: -5vw;
+}
+
+@media (max-width: 767px) {
+  .research-hero { margin-bottom: 0; }
+  .align-items-center > [class*="col-"] img {
+    margin-bottom: 20px;
+  }
 }
 
 /* ==========================================================================
