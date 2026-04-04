@@ -416,6 +416,48 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
 }
 
 /* ==========================================================================
+   CV Mobile Viewer
+   ========================================================================== */
+
+.cv-mobile-viewer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.cv-page-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cv-open-pdf {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+.btn-cv-download {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cv-download:hover {
+  background-color: #333;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ==========================================================================
    Research Hero Image
    ========================================================================== */
 
