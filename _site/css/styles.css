@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-html { line-height: 1.15; -webkit-text-size-adjust: 100%; }
+html { line-height: 1.15; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 sup, sub {
   vertical-align: baseline;
@@ -436,6 +436,66 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
   }
   [style*="text-align: justify"] {
     text-align: left !important;
+  }
+}
+
+/* ==========================================================================
+   Research Navigation Cards
+   ========================================================================== */
+
+.research-nav-boxes {
+  margin-bottom: 30px;
+}
+
+.research-nav-card {
+  display: block;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding-top: 55%;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.research-nav-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+.research-nav-card:hover::after {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.research-nav-card:hover {
+  text-decoration: none;
+}
+
+.research-nav-card span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#lunar-volcanism,
+#terrestrial-volcanism {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .research-nav-boxes .col-xs-12 + .col-xs-12 {
+    margin-top: 15px;
   }
 }
 
