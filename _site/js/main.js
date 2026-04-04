@@ -18,6 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Navbar background fade on scroll
+(function () {
+  var navbar = document.querySelector(".navbar");
+  if (!navbar) return;
+  window.addEventListener("scroll", function () {
+    var opacity = Math.min(window.pageYOffset / 150, 1);
+    navbar.style.backgroundColor = "rgba(255, 255, 255, " + opacity + ")";
+  }, { passive: true });
+})();
+
 // Typed text effect for home page
 function type() {
   if (typeof Typed !== "undefined") {

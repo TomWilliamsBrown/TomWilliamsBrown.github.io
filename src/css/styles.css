@@ -240,15 +240,13 @@ blockquote small, blockquote .small { color: black; font-weight: normal; font-si
   border: none;
   min-height: inherit;
   position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 10px;
+  left: 10px;
+  right: 10px;
   z-index: 10;
   color: var(--nav-color);
-}
-
-@media (min-width: 768px) {
-  .navbar { margin: 10px; }
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
 /* Collapse area */
