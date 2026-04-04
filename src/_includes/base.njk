@@ -9,6 +9,21 @@
   <meta name="google" content="notranslate" />
   <meta content="Thomas Williams" name="author">
   <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description | default('Personal Website of Thomas Williams') }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.twilliams.info{{ page.url }}">
+  <meta property="og:image" content="https://www.twilliams.info/assets/images/NobleBubble2.png">
+  <meta property="og:site_name" content="Tom Williams">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description | default('Personal Website of Thomas Williams') }}">
+  <meta name="twitter:image" content="https://www.twilliams.info/assets/images/NobleBubble2.png">
+
   <link href="/assets/favicon.ico" rel="icon">
   <title>{{ title }}</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
